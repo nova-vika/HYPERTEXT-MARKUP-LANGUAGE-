@@ -1,0 +1,338 @@
+>>>> HTML - HYPER TEXT MARKUP LANGUAGE.
+
+         ----> IT IS A LANGUAGE THAT DESCRIBE THE CONTENT . LIKE HEADING , TABLE, PARAGRAPH .... ETC. 
+
+
+------------------------------------------- HOW WEBSITES WORKS ---------------------------------------------
+
+
+1. ME ( THE USER ):
+
+       ----->>>>  open the crome 
+       ----->>>>  type : www.google.com
+
+   >>>>>> I AM ASKING FOR A WEBSITE.
+
+2. BROWER ( CHROME/FIREFOX ):
+
+      ----->>>>  browser understand the request 
+      ----->>>>  it says: "i need this website"
+
+3. DNS - DOMAIN NAME SYSTEM ( INTERNET PHONEBOOK ):
+       
+       ----->>> browser asks DNS : " where is google.com?"
+       ------>> DNS replies with a number that is IP address coz computer only know 0's and 1's .
+
+4. SERVER ( WEBSITE COMPUTER ):
+       
+       ----->>> browser contact the server 
+       ----->>> server stores website files 
+       ----->>> The server SEND FILES BACK:
+                        >>> HTML
+                        >>> CSS
+                        >>> JavaScript
+                        >>> Images
+
+5. BROWSER BUILDS THE WEBSITE:
+
+      ------>>> Browser receives HTML / CSS / JS
+      ----->>>> Browser reads HTML first
+      ----->>>> Browser applies CSS
+      ----->>>> Browser runs JavaScript
+
+6. WEBSITE (What You See):
+ 
+        ------>>> Finally, we see the website on the screen.
+
+
+
+---------------------- HYPERTEXT MARKUP LANGUAGE--------------------------------------------------------------
+  
+ 1. HYPERTEXT ---->>>>  text that can link to another page , ie. when u click that goes to that page
+ 2. MARKUP    ---->>>>  mark the cotent to tell the broswer what it is 
+                           .... example : <h1> hello <h1>  ---->>> hello is a heading.
+3. language   ----->>>  A set of rules + tags the browser understands. 
+
+
+--------------------- THE BASIC HTML PAGE STRUCTURE ----------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+   <title> my page </title>
+  </head>
+
+  <body>
+    cotent here
+  </body>
+</html>
+
+ EXPLANATION:
+      ....... <!DOCTYPE html>  ---->>> this says this is html5 
+      ....... <html>           ---->>> start of document 
+      ....... <head>           ---->>> info about the page
+      ....... <body>           ---->>>  what user sees 
+
+-------------------------- TEXT AND HEADINGS --------------------------------------------------------------------
+
+
+ Tag	                 Purpose
+
+<h1>	              Main heading (1 per page)
+<h2>	              Sub heading
+<h3>	              Section heading
+<h4>	              Smaller heading
+<h5>	              Smaller heading
+<h6>	              Smallest heading
+<p>	                  Paragraph
+<br>	              Line break
+<hr>	              Horizontal line
+<strong>	          Important text
+<em>	              Emphasized text
+<small>               Smaller text
+<mark>	              Highlight text
+
+-------------------------- <img> — IMAGE ---------------------------------------------------------------------------
+
+   <img src = " " alt = "" >
+
+   ......  src = image path 
+   ......  alt = text if image fails 
+   ......  no closing tag
+
+
+----------------------- <ul>, <ol>, <li> — LISTS ------------------------------------------------------------------
+
+
+   >>>>>>>>>>    Bullet list  - UNORDERED LIST 
+
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+</ul>
+
+   >>>>>>>>>>     Number list  -  ORDERED LIST 
+
+<ol>
+  <li> step 1 </li>
+  <li> step 2 </li>
+</ol>
+
+
+-------------------------- links are created using the <a> tag.---------------------------------------------------
+
+    <a href="URL">Link Text</a>
+
+     >>>>>   <a> = anchor
+     >>>>>   href = destination (where to go)
+
+
+>>>>What happens?
+
+ 🔹 User clicks
+
+ 🔹Browser opens Google
+
+ 🔹target="_blank" → opens in new tab
+
+>>>>>>  This is how the web is connected (hypertext).
+
+
+--------------------------- AUDIO IN HTML  -------------------------------------------------------------------------
+
+         <audio src="music.mp3" controls></audio>
+
+       >>>  What each part means:
+
+               * <audio> → audio player
+
+               *  src → audio file path
+
+               *  controls → play / pause / volume buttons
+
+                      . Without controls, user sees nothing.
+
+        
+     Audio  attributes :
+
+Attribute               	Meaning
+
+controls               	Show play button
+autoplay             	Play automatically
+loop	                Repeat audio
+muted                	Start muted
+preload	                Load audio early
+
+
+---------------------- VIDEO IN HTML ----------------------------------------------------------------------------------
+
+              <video src = "" controls></video>
+
+    >>>Video attributes :
+
+Attribute          	Meaning
+
+controls	      Play, pause, volume
+autoplay	      Auto play
+loop	          Repeat video
+muted	          Start muted
+poster	          Thumbnail image
+width / height	   Video size
+
+
+--------------------- EMBED YOUTUBE VIDEO -------------------------------------------------------------------------------
+
+
+<iframe 
+  width="560"
+  height="315"
+  src=""
+  allowfullscreen>
+</iframe>
+
+......This is embedding, not hosting.  
+
+or simply go to the description and copy the iframe and paste it in your project .
+
+
+------------------------------- TABLES ---------------------------------------------------------------------------------------
+
+>>>>>>>>>>>>>>>>>>>>>>>. Tables are used to display data in rows and columns.
+
+
+                     BASIC TABLE STRUCTURE :
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Vikas</td>
+    <td>19</td>
+  </tr>
+</table>
+
+
+                 What each tag means:
+
+🔹<table> → table container
+
+🔹<tr> → table row
+
+🔹<th> → table heading (bold, centered)
+
+🔹<td> → table data (normal cell)
+
+
+------------------------- FORMS -----------------------------------------------------------------------------------------------------
+
+📝 WHAT IS A FORM? (VERY SIMPLE)
+
+         >>>>>>>A form is a way for a user to send information to a website.
+
+🔹Examples:
+
+Login form
+
+Signup form
+
+Contact form
+
+Feedback form
+
+👉 Form = asking questions + collecting answers
+
+
+>>>>>INPUT TAG :
+
+    The <input> tag is used to take user data.
+
+1️. TEXT INPUT (Name, username):
+
+        <input type="text" placeholder="Enter your name">
+
+>>>>type="text" → normal text
+>>>>placeholder → hint text
+
+2️. EMAIL INPUT
+
+        <input type="email" placeholder="Enter your email">
+
+>>>> Browser checks:
+          Must contain @
+          Must be valid email
+
+>>>>>>> LABLE :
+
+   >>>  A label tells what the input is for.
+
+     <label for="name">Name</label>
+     <input type="text" id="name">
+
+>> Clicking the label focuses the input.
+>> Helps accessibility.
+
+
+>>>>>... HTML INPUT TYPES — COMPLETE TABLE:
+
+What the input is for           	type value
+
+Normal text (name, username)        	text
+Email address                       	email
+Password (hidden text)	                password
+Numbers only	                        number
+Phone number	                        tel
+Website URL	                             url
+Search box	                             search
+Date picker	                             date
+Time picker	                             time
+Date + time	                             datetime-local
+Month picker                             month
+Week picker 	                         week
+Select one option	                     radio
+Select multiple options	                 checkbox
+Upload file                            	 file
+Choose color	                         color
+Range / slider	                         range
+Hidden data	                             hidden
+Submit form	                             submit
+Reset form	                             reset
+Button (custom action)	                 button
+Image as submit button	                 image
+
+
+                EXAMPLE FORM :
+
+
+<form>
+  <label for="name">Name</label>
+  <input type="text" id="name"><br><br>
+
+  <label for="email">Email</label>
+  <input type="email" id="email"><br><br>
+
+  <label>Gender</label><br>
+  <label><input type="radio" name="gender"> Male</label>
+  <label><input type="radio" name="gender"> Female</label><br><br>
+
+  <label for="country">Country</label>
+  <select id="country">
+    <option>India</option>
+    <option>USA</option>
+  </select><br><br>
+
+  <button type="submit">Submit</button>
+</form>
+
+
+
+
+
+  
+
+
+
+
+
