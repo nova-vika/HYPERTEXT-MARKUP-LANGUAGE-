@@ -1,0 +1,250 @@
+ ------------------------------------------------ CSS - Cascading Style Sheet -----------------------------------------------
+
+ >>>>>> CSS is used to Style and design the webpage .
+
+ >>>>>> What CSS controls
+
+          CSS decides:
+
+               Colors 🎨
+
+               Fonts 🔤
+
+               Sizes 📏
+
+               Spacing 📦
+
+               Layout 🧱
+
+               Responsive design 📱
+
+               Animations ✨
+
+>>>>>>> Why CSS is important
+
+            1. Without CSS:
+
+                 > Websites look boring
+
+                 > No proper layout
+
+                 > Bad user experience
+
+           2.  With CSS:
+
+                > Clean UI
+
+                > Professional websites
+
+                > Mobile-friendly design
+
+
+-------------------------------------------------CSS Syntax --------------------------------------------------------------------
+
+       CSS basic structure:
+
+   selector {
+      property: value;
+}
+
+
+Example:
+p {
+  color: red;
+  font-size: 16px;
+}
+
+ >>>>> selector → what to style (p)
+
+>>>>>> property → what you change (color)
+
+>>>>>> value → how you change it (red)
+
+
+1️. Inline CSS
+
+    What it is :
+
+      >>>  CSS written inside the HTML tag using the style attribute.
+
+      >>>  Example:
+
+            <h1 style="color: red; font-size: 24px;">Hello</h1>
+
+2. Pros :
+
+  >. Quick for testing
+
+  >. Overrides other CSS
+
+3. Cons :
+
+ >. Messy code
+
+ >. Not reusable
+
+ >. Hard to maintain
+
+4. When to use:
+
+ >. Almost never
+
+ >. Only for quick testing
+
+
+2.  Internal CSS :
+
+       What it is :
+
+        >>> CSS written inside a <style> tag in the <head> section.
+
+        >>> Example :
+
+<head>
+  <style>
+    p {
+      color: blue;
+    }
+  </style>
+</head>
+
+1. Pros:
+
+   >. Easy for small pages
+
+   >. No extra file needed
+
+2. Cons :
+
+  >. Not reusable across pages
+
+  >. Makes HTML longer
+
+3. When to use:
+
+  >. Small projects
+
+  >. Learning & demos
+
+
+3. External CSS :
+
+        What it is :
+
+           >>> CSS written in a separate .css file and linked to HTML.
+
+          >>>> Example:
+
+HTML
+
+<link rel="stylesheet" href="style.css">
+
+
+CSS (style.css)
+
+body {
+  background-color: lightgray;
+}
+
+1. Pros : 
+
+    >. Clean code
+
+    >. Reusable
+
+    >. Professional
+
+    >. Easy to maintain
+
+2. Cons: 
+
+     >. Needs extra file (not really a problem)
+
+3. When to use
+
+    >. Real websites
+
+    >. All professional projects
+
+
+------------------------------------------------ Important CSS Selectors -------------------------------------------------------
+
+1️. Element Selector: 
+
+       >> What it does:
+
+            Styles all elements of the same type.
+
+ >> syntax:           
+
+p {
+  color: blue;
+}
+
+>> Used for: basic styling
+>> Example: all paragraphs
+
+
+2️. Class Selector :
+
+       >> What it does:
+
+             >. Styles elements with a specific class.
+>> syntax:
+
+css :
+.card {
+  border: 1px solid gray;
+}
+
+html:
+<div class="card"></div>
+
+>>> Used for: UI components
+✔ Reusable
+✔ Best practice
+
+
+3️. ID Selector
+
+      >>> What it does:
+
+             >. Styles one unique element.
+>> syntax:
+
+#header {
+  background: black;
+}
+
+>>>  Used for: unique elements
+>>>  Do not reuse
+
+
+4️. Group Selector
+
+     >>> What it does:
+     >>> Styles multiple selectors at once.
+>. syntax:
+
+h1, h2, p {
+  color: black;
+}
+
+>>>> Saves time
+
+
+5. Universal Selector (*)
+
+      >>> What it is
+
+      >>>> The universal selector selects ALL elements on the page.
+
+>. syntax :
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+>>> This applies to every HTML element.
