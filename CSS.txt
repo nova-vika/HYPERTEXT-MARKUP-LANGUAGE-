@@ -248,3 +248,234 @@ h1, h2, p {
 
 
 >>> This applies to every HTML element.
+
+
+------------------------------------------ CSS COLORS AND BACKGROUND ----------------------------------------------------------
+
+1️. CSS COLORS :
+
+>>>>> How to apply color :
+
+          >. color: red;
+
+>>>> Used for text color.
+
+
+2. COLOR FORMATS :
+
+**** _____Color Name______:
+
+      >. color: red;
+
+**** _____HEX Color Format_____ :
+
+>> What it is ? :
+    >. Hexadecimal color system.
+
+---Format---:
+
+     #RRGGBB
+
+Meaning
+
+RR → Red
+
+GG → Green
+
+BB → Blue
+
+Each part goes from:
+
+00 (no color) → FF (full color)
+
+Example
+color: #ff0000; /* red */
+color: #00ff00; /* green */
+color: #0000ff; /* blue */
+
+
+**** ______RGB Color Format______ :
+
+What it is ?
+
+   >>>..Mix of Red, Green, Blue values.
+
+Format:
+
+   rgb(red, green, blue)
+
+Value range
+0 → 255
+
+Example
+color: rgb(255, 0, 0);   /* red */
+color: rgb(0, 255, 0);   /* green */
+color: rgb(0, 0, 255);   /* blue */
+
+>>> When to use:
+
+--> When working with dynamic values
+
+---> JavaScript-based colors
+
+>>  Think: numbers-based colors
+
+***** _______RGBA Color Format_________:
+>> What it is?
+
+      >.. RGB + Alpha (opacity).
+
+>>>>> Format;
+rgba(red, green, blue, alpha)
+
+>>> Alpha value;
+
+0 → fully transparent
+1 → fully visible
+
+Example;
+
+background-color: rgba(0, 0, 0, 0.5);
+
+----> Black with 50% transparency
+
+Used for:
+
+>. Overlays
+
+>. Modals
+
+>. Shadows
+
+>. Glass effect UI
+
+--> Think: transparent colors
+
+
+--------------------------------------------------------🧱 CSS Background ----------------------------------------------------
+
+1️. ____Background Color____:
+
+>>>. What it does ?
+
+         >>>>> Sets the background color of an element.
+
+        >>>>>>> background-color: lightblue;    (SYNTAX)
+
+Example:
+
+div {
+  background-color: #f2f2f2;
+}
+
+---->> Used for cards, sections, buttons
+
+
+2️._____ Background Image_______:
+
+>>.. What it does ?
+
+        >> Adds an image as the background.
+
+        >> background-image: url("image.jpg");  (SYNTAX)
+
+>>>. Used for banners, hero sections
+
+
+3️.______ Background Repeat______ :
+
+>...What it does ?
+
+     >>>>..Controls whether the image repeats.
+
+     >>>>...background-repeat: no-repeat;     (SYNTAX)
+
+     >>>>>...Other values:
+
+                ---> repeat (default)
+
+                ----> repeat-x
+
+                ----> repeat-y
+
+
+4️. Background Size :
+
+>>>..What it does ?
+
+      >>> Controls image size.
+
+       >>> background-size: cover;       (SYNTAX)
+
+>>> Values:
+
+>>>>... cover → fills entire area
+
+>>>>.... contain → fits inside
+
+>>>>.... auto → original size
+
+-->> Use cover for hero sections
+
+
+
+----------------------------------------------CSS TEXT AND FONTS ---------------------------------------------------------------
+
+
+| Property          | Purpose                      | Example                           |
+| ----------------- | ---------------------------- | --------------------------------- |
+| `font-family`     | Sets font style              | `font-family: Arial, sans-serif;` |
+| `font-size`       | Sets text size               | `font-size: 16px;`                |
+| `font-weight`     | Controls boldness            | `font-weight: 700;`               |
+| `line-height`     | Space between lines          | `line-height: 1.5;`               |
+| `color`           | Text color                   | `color: #333;`                  |
+| `text-align`      | Aligns text                  | `text-align: center;`             |
+| `text-decoration` | Underline / remove underline | `text-decoration: none;`          |
+| `text-transform`  | Changes text case            | `text-transform: uppercase;`      |
+| `letter-spacing`  | Space between letters        | `letter-spacing: 1px;`            |
+| `word-spacing`    | Space between words          | `word-spacing: 5px;`              |
+| `white-space`     | Controls text wrapping       | `white-space: nowrap;`            |
+| `text-overflow`   | Handles overflow text        | `text-overflow: ellipsis;`        |
+| `overflow`        | Hides extra text             | `overflow: hidden;`               |
+
+
+
+------------------------------------------------ CSS BOX MODEL -------------------------------------------------------------
+
+| Part      | What it is            | Purpose                        | Example                    |
+| --------- | --------------------- | ------------------------------ | -------------------------- |
+| `content` | Actual text / image   | Main content area              | `width: 200px;`            |
+| `padding` | Space inside the box  | Space between content & border | `padding: 20px;`           |
+| `border`  | Edge around padding   | Box boundary                   | `border: 1px solid black;` |
+| `margin`  | Space outside the box | Space between elements         | `margin: 15px;`            |
+
+
+📐 Width & Height :
+
+| Property     | Meaning        | Example              |
+| ------------ | -------------- | -------------------- |
+| `width`      | Content width  | `width: 300px;`      |
+| `height`     | Content height | `height: 200px;`     |
+| `max-width`  | Maximum width  | `max-width: 100%;`   |
+| `min-height` | Minimum height | `min-height: 100px;` |
+
+
+ _______ SIMPLE DIAGRAM _______
+
++--------------------
+|     Margin         |
+|  +---------------+ |
+|  |   Border      | |
+|  | +-----------+ | |
+|  | | Padding   | | |
+|  | | +-------+ | | |
+|  | | |Content| | | |
+|  | | +-------+ | | |
+|  | +-----------+ | |
+|  +---------------+ |
++---------------------+
+
+
+
+
+
