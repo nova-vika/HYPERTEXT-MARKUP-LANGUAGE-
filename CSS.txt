@@ -477,5 +477,737 @@ div {
 
 
 
+------------------------------------------------------- CSS display ---------------------------------------------------------
+
+
+DISPLAY PROPERTY :
+
+>>>> The CSS display property defines how an HTML element is displayed on the web page.
+>>>> It controls the layout behavior of elements such as whether they appear on a new line, share space, or are hidden.
+
+--->> Syntax:
+         display: value;
+
+>>>> Common display values used in web development:
+
+                *  block
+                * inline  
+                * inline-block
+                * none
+
+<><><> 1. DISPLAY: BLOCK :
+
+--->> Definition:
+           >. Block-level elements start on a new line and take the full width of their parent container.
+
+>>>> Characteristics:
+
+**** Always starts on a new line
+
+**** Takes 100% available width by default
+
+**** Width and height can be applied
+
+**** Margin and padding work on all sides
+
+**** Examples of block elements:
+
+           div, p, h1–h6, section, header, footer
+
+
+<><><> 2. DISPLAY: INLINE :
+
+---->>> Definition:
+            >. Inline elements do not start on a new line and take only as much width as their content.
+
+>>>> Characteristics:
+
+**** do not start on a new line
+
+**** Width and height cannot be set
+
+**** Margin works only left and right
+
+**** Padding works but may overlap vertically
+
+**** Examples of inline elements:
+             span, a, strong, em
+
+
+<><><> 3. DISPLAY: INLINE-BLOCK :
+
+>>>> Definition:
+        >. Inline-block elements behave like inline elements but allow width and height.
+
+>>>> Characteristics:
+
+**** Stays in the same line
+
+**** Width and height can be set
+
+**** Margin and padding work on all sides
+
+**** Example:
+.button {
+display: inline-block;
+width: 150px;
+height: 40px;
+}
+
+
+<><><> 4. DISPLAY: NONE :
+
+>>> Definition:
+      >. The element is completely removed from the layout and not visible.
+
+>>> Characteristics:
+
+**** Element is hidden
+
+**** Takes no space
+
+**** Not accessible visually
+
+**** Example:
+.hidden {
+display: none;
+}
+
+
+
+-------------------------------------------------- CSS positioning ---------------------------------------------------------
+
+
+>>>>>>>>>  The CSS position property defines how an element is positioned in the document and how properties like
+ top, right, bottom, and left affect it.
+
+>.>>>> Syntax:
+
+position: value;
+
+>>>> Position values:
+
+          ** static, relative, absolute, fixed, sticky
+
+1. POSITION: STATIC (default):
+
+>> Definition:
+      >. Static is the default position for all HTML elements.
+
+>>> Characteristics:
+
+**** Element follows normal document flow
+
+**** top, right, bottom, left do NOT work
+
+**** No special positioning behavior
+
+**** Example:
+div {
+position: static;
+}
+
+>>>> Note:
+       >> All elements are static by default unless changed.
+
+2. POSITION: RELATIVE :
+
+>>> Definition:
+       >. Relative positioning moves the element relative to its original position.
+
+>>>> Characteristics:
+
+**** Element stays in normal flow
+
+**** Space is still reserved
+
+**** top, left, right, bottom work
+
+**** Used as a reference for absolute elements
+
+**** Example:
+.box {
+position: relative;
+top: 20px;
+left: 10px;
+}
+
+3. POSITION: ABSOLUTE :
+
+>>>> Definition:
+         >> Absolute positioning positions an element relative to the nearest positioned ancestor.
+
+>>>> Characteristics:
+
+**** Removed from normal document flow
+
+**** No space is reserved
+
+**** Positioned using top, left, right, bottom
+
+**** If no positioned parent exists, it uses the body
+
+**** Example:
+.parent {
+position: relative;
+}
+
+.child {
+position: absolute;
+top: 0;
+right: 0;
+}
+
+>>>> Use cases:
+
+**** Dropdown menus
+
+T*** ooltips
+
+**** Badges
+
+**** Icons on images
+
+**** Key Rule:
+
+>>>> Absolute always looks for the nearest parent with:
+position: relative | absolute | fixed | stickyExample:
+
+
+>>>> POSITION: FIXED :
+
+>>>> Definition:
+
+        >. Fixed positioning positions an element relative to the viewport (screen).
+
+>>>> Characteristics:
+
+**** Removed from document flow
+
+**** Stays fixed even when scrolling
+
+**** Positioned using top, left, right, bottom
+
+**** Example:
+.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+
+>>>> Note:
+     >.. Fixed elements do not move when the page scrolls.
+
+
+>>>> POSITION: STICKY :
+
+>>>> Definition:
+        >>. Sticky positioning is a mix of relative and fixed.
+
+>>>> Characteristics:
+
+**** Behaves like relative initially
+
+**** Becomes fixed when scrolling reaches a point
+
+**** Requires top, left, etc. to work
+
+**** Example:
+.header {
+position: sticky;
+top: 0;
+}
+
+**** Use cases:
+
+Sticky headers
+
+Table headings
+
+Section titles
+
+***** Important:
+
+Sticky works only if:
+      Parent does not have overflow: hidden
+
+       A top value is defined
+
+
+----------------------------------------------------- FLEX BOX -------------------------------------------------------------
+
+>>>>>>>> FLEXBOX :
+
+            >.. Flexbox is used to align, arrange, and space elements easily in a row or column.
+
+>>>>.. To enable flexbox:
+          display: flex;
+
+..... display: flex
+→ Turns an element into a flex container
+→ All direct children become flex items
+
+ flex-direction :
+→ Decides the direction of items
+
+row
+→ Items go left to right
+
+column
+→ Items go top to bottom
+
+justify-content :
+→ Aligns items along the MAIN axis
+
+flex-start :
+→ Items at start
+
+center :
+→ Items at center
+
+space-between :
+→ Space between items
+
+space-evenly :
+→ Equal space around items
+
+align-items :
+→ Aligns items along the CROSS axis
+
+stretch :
+→ Items stretch (default)
+
+center :
+→ Items centered
+
+flex-start :
+→ Items at top
+
+flex-end :
+→ Items at bottom
+
+flex-wrap :
+→ Controls wrapping of items
+
+nowrap :
+→ Items stay in one line
+
+wrap :
+→ Items move to next line
+
+gap :
+→ Adds space between items
+
+
+
+-------------------------------------------------- CSS GRID ----------------------------------------------------------------
+
+
+>>>>> CSS Grid is used to create row and column based layouts (two-dimensional layout).
+
+display: grid
+→ Turns an element into a grid container
+→ All direct children become grid items
+
+grid-template-columns :
+→ Defines number and width of columns
+
+Example:
+grid-template-columns: 1fr 1fr 1fr;
+→ Creates 3 equal columns
+
+repeat():
+→ Short way to write repeated columns
+
+Example:
+grid-template-columns: repeat(3, 1fr);
+
+fr unit:
+→ Fraction of available space
+
+1fr:
+→ One equal part of space
+
+grid-template-rows:
+→ Defines height of rows
+
+Example:
+grid-template-rows: 100px auto;
+
+gap:
+→ Space between rows and columns
+
+Example:
+gap: 20px;
+
+grid-column:
+→ Controls how many columns an item spans
+
+Example:
+grid-column: 1 / 3;
+→ Item spans from column 1 to 3
+
+grid-row:
+→ Controls how many rows an item spans
+
+Example:
+grid-row: 1 / 2;
+
+justify-items : 
+→ Aligns items horizontally inside grid cells
+
+align-items
+→ Aligns items vertically inside grid cells
+
+justify-content :
+→ Aligns the entire grid horizontally
+
+align-content :
+→ Aligns the entire grid vertically
+
+auto-fit :
+→ Adjusts number of columns automatically based on screen size
+
+minmax() :
+→ Sets minimum and maximum size for columns
+
+Example:
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+>>> WHERE GRID IS USED :
+
+**** Image galleries
+
+**** Dashboards
+
+**** Page layouts
+
+**** Card sections
+
+**** Portfolio grids
+
+
+------------------------------------------------------- MEDIA QURIES -------------------------------------------------------------------------------
+
+
+>>>> Media Queries are used to apply CSS based on screen size.
+
+>>> BASIC SYNTAX :
+
+@media (condition) {
+CSS rules
+}
+
+--> max-width :
+→ Styles apply when screen is SMALLER
+
+--> Example:
+@media (max-width: 768px) {
+styles here
+}
+
+--> min-width
+→ Styles apply when screen is LARGER
+
+--> Example:
+@media (min-width: 1024px) {
+styles here
+}
+
+>>>>>>>>>>.. COMMON BREAKPOINTS (ENOUGH)
+
+Mobile → max-width: 600px
+Tablet → max-width: 768px
+Laptop → max-width: 1024px
+
+>>>>>>>>..MOST COMMON USES :
+
+**** Change layout
+
+**** Change flex direction
+
+**** Change grid columns
+
+**** Resize text
+
+>>>> FLEXBOX + MEDIA QUERY :
+
+@media (max-width: 768px) {
+.container {
+flex-direction: column;
+}
+}
+
+>>> GRID + MEDIA QUERY :
+
+@media (max-width: 768px) {
+.grid {
+grid-template-columns: 1fr;
+}
+}
+
+
+--------------------------------------------------- MAKE THE WEBSITE BEAUTIFUL ----------------------------------------------------------------------
+
+>>>>>>>>>> INTRODUCTION
+
+      >>. CSS Transform is used to change the shape, position, size, or orientation of an element.
+
+      >>. Transform does NOT affect surrounding elements. Only the element itself changes visually.
+
+--->> Syntax:
+transform: value;
+
+1. ROTATE ELEMENTS :
+
+     >.. Rotate is used to rotate an element around its center.
+
+-->> Syntax:
+transform: rotate(angle);
+
+>. Example:
+transform: rotate(45deg);
+
+-->> Positive value → clockwise
+-->> Negative value → anticlockwise
+
+2. TRANSLATE ELEMENTS :
+
+           >>. Translate is used to move an element from its original position.
+
+-->> Syntax:
+transform: translate(x, y);
+
+-->> translateX(px) → moves left or right
+-->> translateY(px) → moves up or down
+
+>.. Example:
+transform: translateX(50px);
+
+3. SCALE ELEMENTS :
+
+     >>. Scale is used to increase or decrease the size of an element.
+
+-->> Syntax:
+transform: scale(value);
+
+-->> scale(1) → normal size
+-->> scale(1.2) → bigger
+-->> scale(0.8) → smaller
+
+>>.. Example:
+transform: scale(1.1);
+
+4. SKEW ELEMENTS :
+
+       >.. Skew is used to tilt an element along X or Y axis.
+
+-->> Syntax:
+transform: skew(x-angle, y-angle);
+
+-->> skewX() → tilts horizontally
+-->> skewY() → tilts vertically
+
+-->> Example:
+transform: skewX(20deg);
+
+5. USE OF MATRIX FUNCTION :
+
+         >.. Matrix is an advanced way to combine multiple transforms in one function.
+
+>>.. IT controls:
+
+-->> scale
+
+-->> rotate
+
+-->> translate
+
+-->> skew
+
+>>>>> Syntax:
+transform: matrix(a, b, c, d, e, f);
+-----------------------------------------------------------------
+Note:
+Matrix is rarely written manually.
+Used mostly by browsers or advanced tools.
+
+COMBINING TRANSFORMS
+
+Multiple transforms can be applied together.
+                                                                           |
+Syntax:                                                               (IMPORTANT NOTES)
+transform: translate() rotate() scale();                                   |
+
+Example:
+transform: translateX(50px) rotate(20deg) scale(1.1);
+
+Order matters:
+Transforms are applied from left to right. → to change look
+
+
+---------------------------------------------------------------------
+
+
+>>>> INTRODUCTION :
+
+--->> CSS Transition is used to make CSS property changes smooth instead of sudden.
+--->> It improves user experience and makes websites look attractive.
+
+>>>>>>>>> CSS TRANSITION OVERVIEW:
+
+* Without transition:
+→   Change happens instantly
+
+* With transition:
+→   Change happens smoothly over time
+
+>>> Transitions work when:
+
+-->> A property changes
+
+-->> Usually with :hover, :focus, :active
+
+TRANSITION PROPERTY :
+ 
+1. transition-property :
+→ Defines which CSS property should animate
+
+Examples:
+color
+background-color
+transform
+opacity
+
+Example:
+transition-property: transform;
+
+2. TRANSITION DURATION :
+
+transition-duration
+→ Defines how long the transition takes
+
+Example:
+transition-duration: 0.5s;
+
+Meaning:
+→ Transition completes in 0.5 seconds
+
+3. TRANSITION TIMING FUNCTION :
+
+transition-timing-function
+→ Controls speed pattern of the transition
+
+Common values:
+
+ease
+→ Slow start, fast middle, slow end (default)
+
+linear
+→ Same speed throughout
+
+ease-in
+→ Slow start
+
+ease-out
+→ Slow end
+
+ease-in-out
+→ Slow start and slow end
+
+4. CUSTOM CUBIC BEZIER :
+
+cubic-bezier()
+→ Creates custom timing curves
+
+Syntax:
+cubic-bezier(x1, y1, x2, y2);
+
+Example:
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+>> Used when:
+
+You want advanced animation control
+
+More natural motion
+
+5. TRANSITION DELAY :
+
+transition-delay
+→ Adds a pause before transition starts
+
+Example:
+transition-delay: 0.2s;
+
+Meaning:
+→ Transition starts after 0.2 seconds
+
+6. TRANSITION SHORTHAND PROPERTY :
+
+Shorthand combines all transition properties.
+
+Syntax:
+transition: property duration timing-function delay;
+
+Example:
+transition: all 0.3s ease 0s;
+
+Most common usage:
+transition: all 0.3s ease;
+
+APPLYING TRANSITIONS TO MULTIPLE ELEMENTS
+
+>>>. You can apply transitions to:
+
+Buttons
+
+Cards
+
+Images
+
+Links
+
+Icons
+
+>>> One transition rule works for all property changes.
+
+>>>>>>>>> PRACTICAL EXAMPLES FOR WEB DEVELOPERS :
+
+Common uses:
+
+--->> Button hover effects
+
+--->> Card lift on hover
+
+--->> Image zoom
+
+--->> Smooth color changes
+
+--->> Navigation link animation
+
+>>>> IMPORTANT RULES (VERY IMPORTANT)
+
+--->> Transition must be written in the normal state
+
+--->> Hover state only changes the property
+
+--->> Transition does NOT run automatically
+
+--->> Needs a trigger (hover, focus, etc.)
+
+TRANSITION vs ANIMATION (ONE LINE)
+
+Transition
+→ Runs on change
+
+Animation
+→ Runs automatically
+
+>>>>...FINAL SUMMARY :
+
+--->> CSS Transition controls how fast and how smoothly a change happens.
+
 
 
